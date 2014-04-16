@@ -17,7 +17,10 @@ app.routers.AppRouter = Backbone.Router.extend({
         if (!app.homeView) {
             app.homeView = new app.views.HomeView();
             app.homeView.render();
-            getAvailablePromos();
+            if (checkConnection() !== "No network connection") {
+                getAvailablePromos();
+            }
+            
         } else {
             console.log('reusing home view');
             app.homeView.delegateEvents(); // delegate events when the view is recycled
