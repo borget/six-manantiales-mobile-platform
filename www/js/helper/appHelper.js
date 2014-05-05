@@ -87,7 +87,7 @@ function carouselInit(){
 function initGoogleMap() {
 	console.log("GoogleMaps INIT X");
 
-	var myLatlng = new google.maps.LatLng(20.37419, -99.99088);
+	var myLatlng = new google.maps.LatLng(20.41356, -100.000005);
 
 
 	var mapOptions = {
@@ -109,8 +109,9 @@ function initGoogleMap() {
 	      '</div>'+
 	      '<h4 id="firstHeading" class="firstHeading">Six Manantiales</h4>'+
 	      '<div id="bodyContent">'+
-	      '<p>Tel. 442 402 30 48.</p>'+
-	      '<p>Correo. alberto.vazq.rmz@gmail.com</p>'+
+	      '<p>Calle Tehuacán #311</p>'+
+	      '<p>Colonia Manantiales de San Juan</p>'+
+	      '<p>Tel 272 28 31</p>'+
 	      '</div>'+
 	      '</div>';
 

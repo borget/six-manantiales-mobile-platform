@@ -2,6 +2,7 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     routes: {
         "":			"home",
+        "events":   "events",
         "about":    "about",
         "location": "location"
 
@@ -27,6 +28,18 @@ app.routers.AppRouter = Backbone.Router.extend({
         }
         app.slider.slidePage(app.homeView.$el);
         
+    },
+
+    events: function () {
+        
+        /*if (!app.aboutView) {*/
+            app.eventsView = new app.views.EventsView();
+            app.eventsView.render();
+        /*} else {
+            console.log('reusing about view');
+            app.aboutView.delegateEvents(); // delegate events when the view is recycled
+        }*/
+        app.slider.slidePage(app.eventsView.$el);
     },
     
     about: function () {
