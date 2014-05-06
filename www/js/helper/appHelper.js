@@ -75,7 +75,7 @@ function refreshCarousel(){
 
 	} else {
 		navigator.notification.alert(
-	        'Se ha perdido la conexión a Internet!',  // message
+	        'No hay conexión a Internet!',  // message
 	        null,         // callback
 	        'Six Manantiales',    // title
 	        null                  // buttonName
