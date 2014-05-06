@@ -24,7 +24,12 @@ function getAvailablePromos() {
 				ajaxHelper.loadPromos(data);
 			},
 			error: function (request,error) {
-				navigator.notification.alert('Ha ocurrido un error, intenta otra vez!');
+				navigator.notification.alert(
+			        'Problemas al actualizar los promos, intenta otra vez!',  // message
+			        null,         // callback
+			        'Six Manantiales',    // title
+			        null                  // buttonName
+			    );
 			}
 		});
 		
@@ -69,7 +74,12 @@ function refreshCarousel(){
 		getAvailablePromos();
 
 	} else {
-		$('#content').html(noInternetView.el);
+		navigator.notification.alert(
+	        'Se ha perdido la conexión a Internet!',  // message
+	        null,         // callback
+	        'Six Manantiales',    // title
+	        null                  // buttonName
+    	);
 	}
 	console.log("refreshCarousel after...");
 }

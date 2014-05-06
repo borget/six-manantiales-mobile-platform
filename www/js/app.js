@@ -29,7 +29,7 @@ var notification = JSON.parse(JSON.stringify(event.notification));
 navigator.notification.alert(
     notification.header +" "+notification.title,  // message
     null,         // callback
-    'Six Promociones',    // title
+    'Six Manantiales',    // title
     null                  // buttonName
 );
 
@@ -122,7 +122,12 @@ var app = {
 };
 
 function onOfflineHandler() {
-    navigator.notification.alert('Se ha perdido la conexión a Internet!');
+    navigator.notification.alert(
+        'Se ha perdido la conexión a Internet!',  // message
+        null,         // callback
+        'Six Manantiales',    // title
+        null                  // buttonName
+    );
 }
 
 function onOnlineHandler() {
