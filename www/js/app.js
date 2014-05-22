@@ -108,7 +108,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        if (checkConnection() !== "No network connection") {
+        if (appHelper.checkConnection() !== "No network connection") {
             initPushwoosh();
         }        
         
@@ -131,6 +131,6 @@ function onOfflineHandler() {
 }
 
 function onOnlineHandler() {
-    refreshCarousel();
+    appHelper.refreshCarousel();
     initPushwoosh();
 }

@@ -18,8 +18,8 @@ app.routers.AppRouter = Backbone.Router.extend({
         if (!app.homeView) {
             app.homeView = new app.views.HomeView();
             app.homeView.render();
-            if (checkConnection() !== "No network connection") {
-                getAvailablePromos();
+            if (appHelper.checkConnection() !== "No network connection") {
+                appHelper.getAvailablePromos();
             }
             
         } else {
@@ -33,8 +33,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     events: function () {
         
         /*if (!app.aboutView) {*/
-            app.eventsView = new app.views.EventsView();
-            app.eventsView.render();
+        app.eventsView = new app.views.EventsView();
+        app.eventsView.render();
         /*} else {
             console.log('reusing about view');
             app.aboutView.delegateEvents(); // delegate events when the view is recycled
@@ -44,25 +44,23 @@ app.routers.AppRouter = Backbone.Router.extend({
     
    location: function () {
         
-        if (!app.locationView) {
+        //if (!app.locationView) {
         app.locationView = new app.views.LocationView();
         app.locationView.render();
         
-        }
+        //}
 
         app.slider.slidePage(app.locationView.$el);
 
-        initGoogleMap();
+        appHelper.initGoogleMap();
     },
 
     service: function () {
         
-        if (!app.serviceView) {
+        /*if (!app.serviceView) {*/
         app.serviceView = new app.views.ServiceView();
         app.serviceView.render();
         
-        }
-
         app.slider.slidePage(app.serviceView.$el);
     },
 
