@@ -113,7 +113,7 @@ var app = {
         }        
         
 		app.router = new app.routers.AppRouter();
-		app.utils.templates.load(["HomeView", "EventsView","LocationView", "AboutView"],
+		app.utils.templates.load(["HomeView", "EventsView","LocationView", "ServiceView", "AboutView"],
 			function () {
 				app.router = new app.routers.AppRouter();
 				Backbone.history.start();

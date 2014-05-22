@@ -3,9 +3,9 @@ app.routers.AppRouter = Backbone.Router.extend({
     routes: {
         "":			"home",
         "events":   "events",
-        "about":    "about",
-        "location": "location"
-
+        "location": "location",
+        "service": "service",
+        "about":    "about"
     },
 
     initialize: function () {
@@ -42,19 +42,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         app.slider.slidePage(app.eventsView.$el);
     },
     
-    about: function () {
-        
-        /*if (!app.aboutView) {*/
-            app.aboutView = new app.views.AboutView();
-            app.aboutView.render();
-        /*} else {
-            console.log('reusing about view');
-            app.aboutView.delegateEvents(); // delegate events when the view is recycled
-        }*/
-        app.slider.slidePage(app.aboutView.$el);
-    },
-    
-    location: function () {
+   location: function () {
         
         if (!app.locationView) {
         app.locationView = new app.views.LocationView();
@@ -65,6 +53,28 @@ app.routers.AppRouter = Backbone.Router.extend({
         app.slider.slidePage(app.locationView.$el);
 
         initGoogleMap();
-    }
+    },
 
+    service: function () {
+        
+        if (!app.serviceView) {
+        app.serviceView = new app.views.ServiceView();
+        app.serviceView.render();
+        
+        }
+
+        app.slider.slidePage(app.serviceView.$el);
+    },
+
+    about: function () {
+        
+        /*if (!app.aboutView) {*/
+            app.aboutView = new app.views.AboutView();
+            app.aboutView.render();
+        /*} else {
+            console.log('reusing about view');
+            app.aboutView.delegateEvents(); // delegate events when the view is recycled
+        }*/
+        app.slider.slidePage(app.aboutView.$el);
+    }
 });

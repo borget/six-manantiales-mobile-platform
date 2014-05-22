@@ -1,4 +1,4 @@
-app.views.LocationView = Backbone.View.extend({
+app.views.ServiceView = Backbone.View.extend({
 
     initialize: function () {
         

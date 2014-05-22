@@ -97,8 +97,7 @@ function carouselInit(){
 function initGoogleMap() {
 	console.log("GoogleMaps INIT X");
 
-	var myLatlng = new google.maps.LatLng(20.41356, -100.000005);
-
+	var myLatlng = new google.maps.LatLng(20.412866, -100.000060);
 
 	var mapOptions = {
 	  zoom: 16,
@@ -121,7 +120,7 @@ function initGoogleMap() {
 	      '<div id="bodyContent">'+
 	      '<p>Calle Tehuacán #311</p>'+
 	      '<p>Colonia Manantiales de San Juan</p>'+
-	      '<p>Tel 272 28 31</p>'+
+	      '<p>Cel. 427 126 4727</p>'+
 	      '</div>'+
 	      '</div>';
 
